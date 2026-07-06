@@ -5,6 +5,7 @@ import type { Mesh } from "three";
 import Lights from "./Lights";
 import FloatingParticles from "./FloatingParticles";
 import FloatingObject from "./FloatingObject";
+import CameraRig from "./CameraRig";
 
 
 
@@ -18,7 +19,7 @@ function Scene() {
       <FloatingParticles />
 
         <FloatingObject />
-
+        <CameraRig />
       <OrbitControls
         enableZoom={false}
         enablePan={false}
