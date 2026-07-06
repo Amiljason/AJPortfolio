@@ -7,8 +7,11 @@ import Experience from "./sections/Experience";
 import Achievements from "./sections/Achievements";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import { site } from "./data/site";
 
 function App() {
+  document.title = site.title;
+
   return (
     <>
       <Navbar />
