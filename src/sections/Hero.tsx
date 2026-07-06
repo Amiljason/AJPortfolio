@@ -3,6 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { portfolio } from "../data/portfolio";
 import profile from "../assets/images/profile.jpg";
+import SocialLinks from "../components/SocialLinks";
 
 function Hero() {
   return (
@@ -51,6 +52,8 @@ function Hero() {
           Contact Me
             </a>
           </div>
+          
+          <SocialLinks />  
 
           <a
             href="#about"
