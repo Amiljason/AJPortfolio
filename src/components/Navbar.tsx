@@ -1,10 +1,4 @@
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-];
+import { navigation } from "../data/navigation";
 
 function Navbar() {
   return (
@@ -18,7 +12,7 @@ function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-10 md:flex">
-          {navLinks.map((item) => (
+          {navigation.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
