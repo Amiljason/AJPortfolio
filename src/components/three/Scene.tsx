@@ -23,9 +23,8 @@ function Scene() {
       <OrbitControls
         enableZoom={false}
         enablePan={false}
-        autoRotate
-        autoRotateSpeed={0.5}
-      />
+        enableRotate={false}
+        />
     </Canvas>
   );
 }
