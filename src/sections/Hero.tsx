@@ -5,7 +5,7 @@ import profile from "../assets/images/profile.jpg";
 
 function Hero() {
   return (
-    <section className="flex min-h-screen items-center bg-slate-900 px-6">
+    <section className="hero-gradient flex min-h-screen items-center bg-slate-900 px-6">
       <div className="mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row">
         <div className="max-w-2xl">
           <p className="mb-4 text-xl text-slate-300">
@@ -16,23 +16,27 @@ function Hero() {
             I'm {portfolio.name}
           </h1>
 
-          <h2 className="mb-10 text-2xl text-slate-400">
+          <h2 className="text-2xl text-slate-400">
             {portfolio.role}
           </h2>
 
-          <div className="flex gap-4">
+          <p className="mt-6 mb-10 max-w-xl text-lg leading-8 text-slate-400">
+            {portfolio.description}
+          </p>
+
+          <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="rounded-lg bg-white px-6 py-3 font-semibold text-slate-900 transition hover:scale-105"
+              className="rounded-xl bg-white px-7 py-3 font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              View Projects
+          View Projects
             </a>
 
             <a
               href="#contact"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
+              className="rounded-xl border border-slate-600 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800"
             >
-              Contact Me
+          Contact Me
             </a>
           </div>
 
