@@ -1,7 +1,7 @@
 import "../styles/hero.css";
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import { portfolio } from "../data/portfolio";
+import { hero } from "../data/hero";
 import profile from "../assets/images/profile.jpg";
 import SocialLinks from "../components/SocialLinks";
 
@@ -11,20 +11,20 @@ function Hero() {
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-20 md:flex-row">
         <div className="max-w-2xl">
           <p className="mb-4 text-xl text-slate-300">
-            {portfolio.greeting}
+            {hero.greeting}
           </p>
 
           <h1 className="mb-4 text-6xl font-bold text-white md:text-7xl">
-            I'm {portfolio.name}
+            I'm {hero.name}
           </h1>
 
           <TypeAnimation
             sequence={[
-              "Software Engineer",
+              hero.roles[0],
                 2000,
-              "Full Stack Developer",
+              hero.roles[1],
                 2000,
-              "Problem Solver",
+              hero.roles[2],
                 2000,
             ]}
             wrapper="h2"
@@ -34,7 +34,7 @@ function Hero() {
           />
 
           <p className="mt-6 mb-10 max-w-xl text-lg leading-8 text-slate-400">
-            {portfolio.description}
+            {hero.description}
           </p>
 
           <div className="flex flex-wrap gap-4">
