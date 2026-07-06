@@ -28,7 +28,10 @@ function FloatingShape() {
 
 function Scene() {
   return (
-    <Canvas camera={{ position: [0, 0, 5] }}>
+    <Canvas
+        camera={{ position: [0, 0, 5], fov: 50 }}
+        dpr={[1, 2]}
+    >
       <Lights />
       <FloatingParticles />
 
