@@ -3,6 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import type { Mesh } from "three";
 import { Float } from "@react-three/drei";
+import Lights from "./Lights";
 
 function FloatingShape() {
   const meshRef = useRef<Mesh>(null);
@@ -27,7 +28,7 @@ function FloatingShape() {
 function Scene() {
   return (
     <Canvas camera={{ position: [0, 0, 5] }}>
-      <ambientLight intensity={1} />
+      <Lights />
 
         <Float
             speed={2}
