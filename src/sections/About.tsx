@@ -1,12 +1,13 @@
+import Container from "../components/Container";
 import SectionHeading from "../components/SectionHeading";
 
 function About() {
   return (
     <section
       id="about"
-      className="bg-slate-950 px-6 py-28"
+      className="bg-slate-950 py-28"
     >
-      <div className="mx-auto max-w-6xl">
+      <Container>
         <SectionHeading
           title="About Me"
           subtitle="Get to know me better."
@@ -19,7 +20,7 @@ function About() {
           while continuously exploring new technologies and improving my
           problem-solving skills.
         </p>
-      </div>
+      </Container>
     </section>
   );
 }
