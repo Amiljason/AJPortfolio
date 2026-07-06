@@ -1,20 +1,40 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useRef } from "react";
+import type { Mesh } from "three";
+
+function FloatingShape() {
+  const meshRef = useRef<Mesh>(null);
+
+  useFrame((state) => {
+    if (!meshRef.current) return;
+
+    meshRef.current.rotation.x += 0.003;
+    meshRef.current.rotation.y += 0.005;
+    meshRef.current.position.y =
+      Math.sin(state.clock.elapsedTime) * 0.2;
+  });
+
+  return (
+    <mesh ref={meshRef}>
+      <icosahedronGeometry args={[1, 1]} />
+      <meshStandardMaterial wireframe />
+    </mesh>
+  );
+}
 
 function Scene() {
   return (
     <Canvas camera={{ position: [0, 0, 5] }}>
       <ambientLight intensity={1} />
 
-      <mesh>
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial wireframe />
-      </mesh>
+      <FloatingShape />
 
       <OrbitControls
         enableZoom={false}
+        enablePan={false}
         autoRotate
-        autoRotateSpeed={1.5}
+        autoRotateSpeed={0.5}
       />
     </Canvas>
   );
