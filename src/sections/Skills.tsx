@@ -1,3 +1,4 @@
+import Container from "../components/Container";
 import SectionHeading from "../components/SectionHeading";
 import { skills } from "../data/skills";
 
@@ -5,9 +6,9 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="bg-slate-900 px-6 py-28"
+      className="bg-slate-900 py-28"
     >
-      <div className="mx-auto max-w-6xl">
+      <Container>
         <SectionHeading
           title="Skills"
           subtitle="Technologies I work with."
@@ -23,7 +24,7 @@ function Skills() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
