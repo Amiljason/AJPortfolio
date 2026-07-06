@@ -16,7 +16,7 @@ function Hero() {
             {hero.greeting}
           </p>
 
-          <h1 className="mb-4 text-6xl font-bold text-white md:text-7xl">
+          <h1 className="mb-4 text-6xl font-bold  md:text-7xl">
             I'm {hero.name}
           </h1>
 

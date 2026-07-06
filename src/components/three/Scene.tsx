@@ -6,6 +6,7 @@ import Lights from "./Lights";
 import FloatingParticles from "./FloatingParticles";
 import FloatingObject from "./FloatingObject";
 import CameraRig from "./CameraRig";
+import Effects from "./Effects";
 
 
 
@@ -20,6 +21,7 @@ function Scene() {
 
         <FloatingObject />
         <CameraRig />
+        <Effects />
       <OrbitControls
         enableZoom={false}
         enablePan={false}
