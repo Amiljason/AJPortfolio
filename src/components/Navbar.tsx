@@ -1,36 +1,38 @@
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 function Navbar() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-800/50 bg-slate-900/80 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <header className="fixed top-0 z-50 w-full border-b border-slate-800/50 bg-slate-900/80 backdrop-blur-md">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <a
           href="#"
-          className="text-2xl font-extrabold tracking-tight text-white transition hover:text-slate-300"
+          className="text-2xl font-bold tracking-tight text-white"
         >
           AJ
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.name}>
+        <ul className="hidden items-center gap-10 md:flex">
+          {navLinks.map((item) => (
+            <li key={item.label}>
               <a
-                href={link.href}
-                className="text-sm font-medium text-slate-300 transition hover:text-white"
+                href={item.href}
+                className="group relative text-sm font-medium text-slate-300 transition-colors duration-300 hover:text-white"
               >
-                {link.name}
+                {item.label}
+
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
