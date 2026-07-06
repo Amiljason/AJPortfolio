@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import type { Mesh } from "three";
+import { Float } from "@react-three/drei";
 
 function FloatingShape() {
   const meshRef = useRef<Mesh>(null);
@@ -28,7 +29,13 @@ function Scene() {
     <Canvas camera={{ position: [0, 0, 5] }}>
       <ambientLight intensity={1} />
 
-      <FloatingShape />
+        <Float
+            speed={2}
+            rotationIntensity={1}
+            floatIntensity={2}
+        >
+        <FloatingShape />
+        </Float>
 
       <OrbitControls
         enableZoom={false}
