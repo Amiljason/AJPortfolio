@@ -1,3 +1,4 @@
+import Container from "../components/Container";
 import SectionHeading from "../components/SectionHeading";
 import { achievements } from "../data/achievements";
 
@@ -5,9 +6,9 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="bg-slate-950 px-6 py-28"
+      className="bg-slate-950 py-28"
     >
-      <div className="mx-auto max-w-6xl">
+      <Container>
         <SectionHeading
           title="Achievements"
           subtitle="Highlights of my journey."
@@ -29,7 +30,7 @@ function Achievements() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
