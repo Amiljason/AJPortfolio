@@ -1,5 +1,6 @@
 import "../styles/hero.css";
 import { ArrowDown } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
 import { portfolio } from "../data/portfolio";
 import profile from "../assets/images/profile.jpg";
 
@@ -16,9 +17,20 @@ function Hero() {
             I'm {portfolio.name}
           </h1>
 
-          <h2 className="text-2xl text-slate-400">
-            {portfolio.role}
-          </h2>
+          <TypeAnimation
+            sequence={[
+              "Software Engineer",
+                2000,
+              "Full Stack Developer",
+                2000,
+              "Problem Solver",
+                2000,
+            ]}
+            wrapper="h2"
+            speed={50}
+            repeat={Infinity}
+            className="text-2xl text-slate-400"
+          />
 
           <p className="mt-6 mb-10 max-w-xl text-lg leading-8 text-slate-400">
             {portfolio.description}
