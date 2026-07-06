@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -7,10 +8,12 @@ import Experience from "./sections/Experience";
 import Achievements from "./sections/Achievements";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import { site } from "./data/site";
+import { seo } from "./data/seo";
 
 function App() {
-  document.title = site.title;
+  useEffect(() => {
+    document.title = seo.title;
+  }, []);
 
   return (
     <>
