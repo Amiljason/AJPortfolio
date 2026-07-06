@@ -1,3 +1,4 @@
+import Container from "../components/Container";
 import SectionHeading from "../components/SectionHeading";
 import { contact } from "../data/contact";
 
@@ -5,9 +6,9 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-slate-900 px-6 py-28"
+      className="bg-slate-900 py-28"
     >
-      <div className="mx-auto max-w-4xl">
+      <Container>
         <SectionHeading
           title="Contact"
           subtitle="Let's connect."
@@ -26,7 +27,7 @@ function Contact() {
             <strong>GitHub:</strong> {contact.github}
           </p>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
