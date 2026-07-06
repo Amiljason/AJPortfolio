@@ -4,6 +4,7 @@ import { useRef } from "react";
 import type { Mesh } from "three";
 import { Float } from "@react-three/drei";
 import Lights from "./Lights";
+import FloatingParticles from "./FloatingParticles";
 
 function FloatingShape() {
   const meshRef = useRef<Mesh>(null);
@@ -29,6 +30,7 @@ function Scene() {
   return (
     <Canvas camera={{ position: [0, 0, 5] }}>
       <Lights />
+      <FloatingParticles />
 
         <Float
             speed={2}
