@@ -1,5 +1,5 @@
 function Contact() {
-  return <section>Contact</section>;
+  return <section id="contact"></section>;
 }
 
 export default Contact;

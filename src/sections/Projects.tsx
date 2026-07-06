@@ -1,5 +1,5 @@
 function Projects() {
-  return <section>Projects</section>;
+  return <section id="projects"></section>;
 }
 
 export default Projects;

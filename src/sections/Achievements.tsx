@@ -1,5 +1,5 @@
 function Achievements() {
-  return <section>Achievements</section>;
+  return <section id="achievements"></section>;
 }
 
 export default Achievements;
