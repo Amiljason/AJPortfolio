@@ -4,13 +4,12 @@ import { TypeAnimation } from "react-type-animation";
 import { hero } from "../data/hero";
 import profile from "../assets/images/profile.jpg";
 import SocialLinks from "../components/SocialLinks";
-import Scene from "../components/three/Scene";
+import Background from "../components/three/Background";
 
 function Hero() {
   return (
-    <section className="hero-gradient relative flex min-h-screen items-center overflow-hidden bg-slate-900 px-6 pt-20">      <div className="absolute inset-0 -z-10">
-       <Scene />
-        </div>
+    <section className="hero-gradient relative flex min-h-screen items-center overflow-hidden bg-slate-900 px-6 pt-20">      
+      <Background />
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-20 md:flex-row">
         <div className="max-w-2xl">
           <p className="mb-4 text-xl text-slate-300">
