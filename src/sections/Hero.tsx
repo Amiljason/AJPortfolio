@@ -5,8 +5,8 @@ import profile from "../assets/images/profile.jpg";
 
 function Hero() {
   return (
-    <section className="hero-gradient flex min-h-screen items-center bg-slate-900 px-6">
-      <div className="mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row">
+    <section className="hero-gradient flex min-h-screen items-center bg-slate-900 px-6 pt-20">
+      <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-20 md:flex-row">
         <div className="max-w-2xl">
           <p className="mb-4 text-xl text-slate-300">
             {portfolio.greeting}

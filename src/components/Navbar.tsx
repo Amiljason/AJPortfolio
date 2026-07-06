@@ -12,9 +12,9 @@ function Navbar() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <a
           href="#"
-          className="text-xl font-bold tracking-wide text-white"
+          className="text-2xl font-extrabold tracking-tight text-white transition hover:text-slate-300"
         >
-          Amil Jason
+          AJ
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
