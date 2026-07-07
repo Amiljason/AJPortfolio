@@ -8,68 +8,69 @@ import Background from "../components/three/Background";
 
 function Hero() {
   return (
-    <section className="hero-gradient relative flex min-h-screen items-center overflow-hidden bg-slate-900 px-6 pt-20">      
+    <section className="hero-gradient relative flex min-h-screen items-center overflow-hidden bg-slate-950 px-6 pt-32 md:pt-28">
       <Background />
-      <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-20 md:flex-row">
-        <div className="max-w-2xl">
-          <p className="mb-4 text-xl text-slate-300">
+
+      <div className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-4xl flex-col items-center text-center">
+        <div className="max-w-3xl">
+          <p className="mb-5 text-lg font-medium tracking-wide text-blue-400">
             {hero.greeting}
           </p>
 
-          <h1 className="mb-4 text-6xl font-bold  md:text-7xl">
-            I'm {hero.name}
+          <h1 className="mb-6 text-6xl font-semibold leading-tight tracking-tight text-slate-100 md:text-8xl">
+            I&apos;m <span className="text-sky-300">{hero.name}</span>
           </h1>
 
           <TypeAnimation
             sequence={[
               hero.roles[0],
-                2000,
+              2000,
               hero.roles[1],
-                2000,
+              2000,
               hero.roles[2],
-                2000,
+              2000,
             ]}
             wrapper="h2"
             speed={50}
             repeat={Infinity}
-            className="text-2xl text-slate-400"
+            className="block min-h-[3rem] text-2xl font-medium text-slate-300 md:text-3xl"
           />
 
-          <p className="mt-6 mb-10 max-w-xl text-lg leading-8 text-slate-400">
+          <p className="mx-auto mt-8 mb-12 max-w-2xl text-xl leading-9 text-slate-400">
             {hero.description}
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="#projects"
-              className="rounded-xl bg-white px-7 py-3 font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="rounded-full bg-white px-8 py-4 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-200"
             >
-          View Projects
+              View Projects
             </a>
 
             <a
               href="#contact"
-              className="rounded-xl border border-slate-600 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800"
+              className="rounded-full bg-white px-8 py-4 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-200"
             >
-          Contact Me
+              Contact Me
             </a>
           </div>
-          
-          <SocialLinks />  
+
+          <SocialLinks />
 
           <a
             href="#about"
-            className="mt-16 inline-flex text-slate-400"
+            className="mt-16 inline-flex justify-center text-slate-500 transition hover:text-white"
           >
-            <ArrowDown size={30} />
+            <ArrowDown size={30} className="justify-center" />
           </a>
         </div>
 
-        <div>
+        <div className="mt-14 flex justify-center">
           <img
             src={profile}
             alt="Amil Jason"
-            className="h-80 w-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl"
+            className="h-[300px] w-[300px] rounded-full border border-white/10 object-cover shadow-[0_0_80px_rgba(15,23,42,0.5)] transition-transform duration-500 hover:scale-105 md:h-[360px] md:w-[360px]"
           />
         </div>
       </div>

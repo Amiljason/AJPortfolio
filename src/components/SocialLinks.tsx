@@ -3,7 +3,7 @@ import { contact } from "../data/contact";
 
 function SocialLinks() {
   return (
-    <div className="mt-8 flex items-center gap-5">
+    <div className="mt-8 flex items-center justify-center gap-5">
       <a
         href={contact.github}
         target="_blank"

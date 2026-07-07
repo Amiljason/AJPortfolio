@@ -11,20 +11,28 @@ function Projects() {
       <Container>
         <SectionHeading
           title="Projects"
-          subtitle="Some of my recent work."
+          subtitle="Selected work and ideas I can keep expanding over time."
         />
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+              className="group flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_20px_80px_rgba(0,0,0,0.18)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-slate-500/40 hover:bg-white/[0.05]"
             >
-              <h3 className="text-2xl font-semibold text-white">
-                {project.title}
-              </h3>
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-2xl font-semibold tracking-tight text-white">
+                  {project.title}
+                </h3>
 
-              <p className="mt-4 text-slate-400">
+                {project.status && (
+                  <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-medium text-sky-200">
+                    {project.status}
+                  </span>
+                )}
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-slate-400">
                 {project.description}
               </p>
 
@@ -32,27 +40,37 @@ function Projects() {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-300"
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-slate-300"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-8 flex gap-4">
-                <a
-                  href={project.github}
-                  className="rounded-lg border border-slate-700 px-4 py-2 text-white transition hover:border-white"
-                >
-                  GitHub
-                </a>
+              <div className="mt-auto pt-8">
+                <div className="flex flex-wrap gap-3">
+                  {project.github && project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/5"
+                    >
+                      GitHub
+                    </a>
+                  )}
 
-                <a
-                  href={project.demo}
-                  className="rounded-lg bg-white px-4 py-2 text-slate-900 transition hover:opacity-90"
-                >
-                  Live Demo
-                </a>
+                  {project.demo && project.demo !== "#" && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:opacity-90"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
