@@ -18,7 +18,7 @@ function Hero() {
           </p>
 
           <h1 className="mb-6 text-6xl font-semibold leading-tight tracking-tight text-slate-100 md:text-8xl">
-            I&apos;m <span className="text-sky-300">{hero.name}</span>
+            I&apos;m <span className="bg-gradient-to-r from-slate-950 via-purple-600 to-violet-400 bg-clip-text text-transparent">{hero.name}</span>
           </h1>
 
           <TypeAnimation
