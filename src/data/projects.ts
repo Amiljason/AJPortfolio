@@ -33,4 +33,20 @@ export const projects: Project[] = [
     github: "#",
     status: "Planned",
   },
+  {
+    title: "Search Rescue Drone",
+    description:
+      "An innovative drone-based search and rescue system designed to locate and assist people in need.",
+    tech: ["Drone Technology", "GPS", "Computer Vision"],
+    github: "https://github.com/Amiljason/Search-RescueDrone",
+    status: "Live",
+  },
+  {
+    title: "Client1",
+    description:
+      "A client-focused project delivering tailored solutions and services.",
+    tech: ["Full Stack", "Web Development"],
+    github: "https://github.com/Amiljason/client1",
+    status: "Live",
+  },
 ];
