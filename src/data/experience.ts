@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    title: "Software Engineering Student",
+    title: "Computer Science Engineering ",
     organization: "PES University",
     duration: "2023 - Present",
     description:

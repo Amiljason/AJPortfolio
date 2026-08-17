@@ -2,8 +2,6 @@ export const hero = {
   greeting: "👋 Hello",
   name: "Amil Jason",
   roles: [
-    "Software Engineer",
-    "Full Stack Developer",
     "Problem Solver",
   ],
   description:
