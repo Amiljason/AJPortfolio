@@ -1,10 +1,10 @@
 export const seo = {
-  title: "Amil Jason | Software Engineer",
+  title: "Amil Jason | Computer Science Undergraduate ",
   description:
-    "Software Engineer specializing in Full Stack Development, React, TypeScript, Node.js, and Java.",
+    "Computer Science Undergraduate specializing in Full Stack Development, React, TypeScript, Node.js, and Java.",
   keywords: [
     "Amil Jason",
-    "Software Engineer",
+    "Computer Science Undergraduate",
     "React",
     "TypeScript",
     "Node.js",
